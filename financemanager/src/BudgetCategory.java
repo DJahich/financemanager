@@ -27,6 +27,6 @@ class BudgetCategory {
 
     @Override
     public String toString() {
-        return "Category: " + name + ", Budget: " + budget + ", Total Expenses: " + totalExpenses + ", Remaining Budget: " + getRemainingBudget();
+        return "Категория: " + name + ", Бюджет: " + budget + ", Total Expenses: " + totalExpenses + ", Remaining Budget: " + getRemainingBudget();
     }
 }

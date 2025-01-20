@@ -13,6 +13,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return (isIncome ? "Income" : "Expense") + " - Category: " + category + ", Amount: " + amount;
+        return (isIncome ? "Доходы" : "Расходы") + " - Категория: " + category + ", Сумма: " + amount;
     }
 }

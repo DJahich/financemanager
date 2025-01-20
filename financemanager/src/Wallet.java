@@ -33,13 +33,13 @@ public class Wallet {
     }
 
     public void printSummary() {
-        System.out.println("Current Balance: " + balance);
-        System.out.println("Transactions:");
+        System.out.println("Текущий баланс: " + balance);
+        System.out.println("Транзакия:");
         for (Transaction t : transactions) {
             System.out.println(t);
         }
 
-        System.out.println("Budgets:");
+        System.out.println("Бюджет:");
         for (BudgetCategory category : budgetCategories.values()) {
             System.out.println(category);
         }

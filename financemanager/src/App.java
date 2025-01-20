@@ -14,16 +14,16 @@ public class App {
 
             switch (choice) {
                 case 1 -> {
-                    System.out.print("Enter username: ");
+                    System.out.print("Имя пользователя: ");
                     String username = scanner.nextLine();
-                    System.out.print("Enter password: ");
+                    System.out.print("Пароль: ");
                     String password = scanner.nextLine();
                     manager.register(username, password);
                 }
                 case 2 -> {
-                    System.out.print("Enter username: ");
+                    System.out.print("Имя пользователя: ");
                     String username = scanner.nextLine();
-                    System.out.print("Enter password: ");
+                    System.out.print("Пароль: ");
                     String password = scanner.nextLine();
                     manager.login(username, password);
                 }
@@ -31,33 +31,33 @@ public class App {
                 case 4 -> {
                     User user = manager.getCurrentUser();
                     if (user == null) {
-                        System.out.println("Please login first.");
+                        System.out.println("Необходимо войти в систему для продолжения.");
                         break;
                     }
-                    System.out.print("Enter category: ");
+                    System.out.print("Введите категорию: ");
                     String category = scanner.nextLine();
-                    System.out.print("Enter amount: ");
+                    System.out.print("Введите сумму: ");
                     double amount = scanner.nextDouble();
-                    System.out.print("Is this income? (true/false): ");
-                    boolean isIncome = scanner.nextBoolean();
+                    System.out.print("Это доход? (true/false): ");
+                    boolean isIncome = scanner.nextBoolean();Please login first
                     user.getWallet().addTransaction(category, amount, isIncome);
                 }
                 case 5 -> {
                     User user = manager.getCurrentUser();
                     if (user == null) {
-                        System.out.println("Please login first.");
+                        System.out.println("Необходимо войти в систему для продолжения.");
                         break;
                     }
-                    System.out.print("Enter category: ");
+                    System.out.print("Введите категорию: ");
                     String category = scanner.nextLine();
-                    System.out.print("Enter budget: ");
+                    System.out.print("Введите бюджет: ");
                     double budget = scanner.nextDouble();
                     user.getWallet().setBudget(category, budget);
                 }
                 case 6 -> {
                     User user = manager.getCurrentUser();
                     if (user == null) {
-                        System.out.println("Please login first.");
+                        System.out.println("Необходимо войти в систему для продолжения.");
                         break;
                     }
                     user.getWallet().printSummary();
@@ -66,7 +66,7 @@ public class App {
                     System.out.println("Exiting application...");
                     return;
                 }
-                default -> System.out.println("Invalid choice. Try again.");
+                default -> System.out.println("Некорректный выбор, попробуйте снова.");
             }
         }
     }
